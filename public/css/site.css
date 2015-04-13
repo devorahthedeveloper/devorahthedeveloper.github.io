@@ -1,0 +1,577 @@
+/* RESET */
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none;height:0}
+[hidden]{display:none}
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+html,button,input,select,textarea{font-family:sans-serif}
+body{margin:0;padding:0;font-family:'latoregular', Arial, Helvetica, sans-serif;color:#000;font-size:18px;line-height:1.65em;font-weight:normal;}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+blockquote{margin:1em 40px}
+dfn{font-style:italic}
+mark{background:#ff0;color:#000}p,pre{margin:1.25em 0 1.75em 0;}
+code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}
+pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}
+q{quotes:none}
+q:before,q:after{content:'';content:none}
+small{font-size:75%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+dl,menu,ol,ul{/*margin:1em 0;*/ margin:1.25em 0 1.75em 0;}
+dd{margin:0 0 0 40px}
+menu,ol,ul{padding:0 0 0 40px}
+nav ul,nav ol{list-style:none;list-style-image:none}
+img{border:0;-ms-interpolation-mode:bicubic}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+form{margin:0}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0;white-space:normal;*margin-left:-7px}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}
+button,input{line-height:normal}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}
+button[disabled],input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+@font-face {
+    font-family: 'latothin';
+    src: url('../font/Lato-Thin-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Thin-webfont.woff2') format('woff2'),
+         url('../font/Lato-Thin-webfont.woff') format('woff'),
+         url('../font/Lato-Thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latolight';
+    src: url('../font/Lato-Light-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Light-webfont.woff2') format('woff2'),
+         url('../font/Lato-Light-webfont.woff') format('woff'),
+         url('../font/Lato-Light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latoregular';
+    src: url('../font/Lato-Regular-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Regular-webfont.woff2') format('woff2'),
+         url('../font/Lato-Regular-webfont.woff') format('woff'),
+         url('../font/Lato-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latoregular_italic';
+    src: url('../font/lato-italic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-italic-webfont.woff2') format('woff2'),
+         url('../font/lato-italic-webfont.woff') format('woff'),
+         url('../font/lato-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latomedium';
+    src: url('../font/Lato-Medium-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Medium-webfont.woff2') format('woff2'),
+         url('../font/Lato-Medium-webfont.woff') format('woff'),
+         url('../font/Lato-Medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latomedium_italic';
+    src: url('../font/lato-mediumitalic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-mediumitalic-webfont.woff2') format('woff2'),
+         url('../font/lato-mediumitalic-webfont.woff') format('woff'),
+         url('../font/lato-mediumitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latosemibold';
+    src: url('../font/Lato-Semibold-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Semibold-webfont.woff2') format('woff2'),
+         url('../font/Lato-Semibold-webfont.woff') format('woff'),
+         url('../font/Lato-Semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latosemibold_italic';
+    src: url('../font/lato-semibolditalic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-semibolditalic-webfont.woff2') format('woff2'),
+         url('../font/lato-semibolditalic-webfont.woff') format('woff'),
+         url('../font/lato-semibolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latobold';
+    src: url('../font/Lato-Bold-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Bold-webfont.woff2') format('woff2'),
+         url('../font/Lato-Bold-webfont.woff') format('woff'),
+         url('../font/Lato-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latobold_italic';
+    src: url('../font/lato-bolditalic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-bolditalic-webfont.woff2') format('woff2'),
+         url('../font/lato-bolditalic-webfont.woff') format('woff'),
+         url('../font/lato-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latoheavy';
+    src: url('../font/Lato-Heavy-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Heavy-webfont.woff2') format('woff2'),
+         url('../font/Lato-Heavy-webfont.woff') format('woff'),
+         url('../font/Lato-Heavy-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'latoblack';
+    src: url('../font/Lato-Black-webfont.eot');
+    src: local('☺'),
+         url('../font/Lato-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Lato-Black-webfont.woff2') format('woff2'),
+         url('../font/Lato-Black-webfont.woff') format('woff'),
+         url('../font/Lato-Black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latothin_italic';
+    src: url('../font/lato-thinitalic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-thinitalic-webfont.woff2') format('woff2'),
+         url('../font/lato-thinitalic-webfont.woff') format('woff'),
+         url('../font/lato-thinitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'latolight_italic';
+    src: url('../font/lato-lightitalic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-lightitalic-webfont.woff2') format('woff2'),
+         url('../font/lato-lightitalic-webfont.woff') format('woff'),
+         url('../font/lato-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'latohairline';
+    src: url('../font/lato-hairline-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-hairline-webfont.woff2') format('woff2'),
+         url('../font/lato-hairline-webfont.woff') format('woff'),
+         url('../font/lato-hairline-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latohairline_italic';
+    src: url('../font/lato-hairlineitalic-webfont.eot');
+    src: local('☺'),
+         url('../font/lato-hairlineitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lato-hairlineitalic-webfont.woff2') format('woff2'),
+         url('../font/lato-hairlineitalic-webfont.woff') format('woff'),
+         url('../font/lato-hairlineitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html { 
+    font-size: 100%; 
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; 
+}
+
+section{
+    margin-bottom:3em;
+    position:relative;
+}
+section:first-child {
+    border-bottom:1px dotted #aaa;
+}
+.float-l {
+    float:left;
+}
+.float-r {
+    float:right;
+}
+.margin-bottom-0 {
+    margin-bottom:0;
+}
+header {padding:0;}
+
+h1, h2, h3, h4, h5 { font-family: 'latosemibold', sans-serif;font-weight: normal;}
+h1{
+    font-size:26px;
+    line-height:1.5em;
+    text-align: center;
+    font-family: 'latoblack';
+    margin:0;
+    background: url(../img/make-a-splash.png) center 1em no-repeat;
+    padding: 3.9em 0 1.75em;
+    text-transform: uppercase;
+}
+h1 .last {
+    font-family: 'latolight';
+}
+h1 .title {
+    color: #949494;
+    border-left: 1px dotted #737373;
+    text-transform: none;
+    /*font-weight: 300;*/
+    display: inline-block;
+    padding-left: 0.5em;
+    margin-left: .4em;
+    font-weight: normal;
+    font-family: 'latolight';
+}
+h2{
+    color: #949494;
+    font-size: 31px;
+    font-size:40px; /* 31 / 16 */
+    font-weight: normal;
+    line-height: 1.2em;
+    font-family: 'latolight_italic';
+    margin: -.25em 0 .5em;
+    text-align: right;
+}
+h3, h3 a{
+    font-size:29px;
+    line-height:1.5em;
+    font-family:'latoblack';
+    margin:0 0 .5em 0;;
+
+}
+h4{
+    font-size:1em;
+    margin:0;
+    font-size:18px;
+    display:inline-block;
+    font-family:'latobold';
+}
+h5{
+    margin:0;
+    font-size:19px;
+}
+h6{
+    font-size:.75em;
+    margin:2.33em 0;
+}
+p strong ,
+ul strong,
+ol strong{ font-family: 'lato-black'}
+a, a:active, a:visited {color:#026AD2;border-bottom:1px dotted #026AD2; font-family:'latobold'; text-decoration: none;}
+a:hover {border-color:#000;color:#000;}
+a.primary {
+    white-space:pre;
+}
+a.secondary {
+    font-size: .9em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0 0 0 1em;
+}
+
+*>p:first-child {
+    margin-top:0;
+}
+ul.inline {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+ul.inline>li {
+    display: inline-block;
+}
+
+.me {
+    font-weight: 800;
+}
+.bad {
+    color:rgb(189, 0, 0);
+}
+.good {
+    color:rgb(3, 174, 3);
+}
+.brand {
+    position: relative;
+    margin-bottom: 2em;
+}
+.opening-statement {
+    font-weight: 400;
+}
+.project {
+    position:relative;
+    margin-bottom:.75em;
+    border-top:1px dotted #aaa;
+    margin-top:1em;
+    padding:2em 0 1em;
+}
+.project .blurb {
+    font-size:17px;
+    margin:0 0 1em  0;
+    font-family:'latoregular_italic';
+    position:absolute;
+    left:-36%;
+    top:142px;
+    width:30%;
+    text-align:right;
+    line-height:1.5em;
+    font-weight:normal;
+    color:#848484;
+}
+.description {
+}
+.additional {
+    font-size:15px;
+    line-height:1.75;
+}
+.tag-container {margin:0 0 1.25em;
+}
+.project .tags {
+    line-height:1.65em;
+    padding:0;
+    margin:0;
+    position:relative;
+    left:-2px;
+    font-family:'latoregular_italic';
+    font-size:15px;
+    color:#888;
+    
+}
+.project .tags:before{
+    padding:0 .25em;
+    font-family:'latoregular';
+}
+.project .tags li {
+    display:inline-block;
+}
+.project .tags li:after {
+    content:'| ';
+    padding:0 .2em 0 .6em;
+    color:#DDD2C6;
+}
+.project .tags li:last-child:after {
+    content:' ';
+}
+
+
+.project .actions  {
+    margin-bottom:1.5em;
+}
+.project .actions .btn {margin-bottom:.25em;
+}
+.thumb {
+    margin:.5em 0;
+}
+.thumb img {
+    display:block;
+    border:1px solid #ddd;
+    max-width:100%;
+}
+.thumb a {border:none;}
+.btn, a.btn {
+    display:inline-block;
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+    font-weight: 400;
+    border:none;
+    padding:0.2em .6em;
+    background-color:#026AD2;
+    font-family: 'latobold', Arial, Helvetica, sans-serif;
+    border-radius:6px;
+}
+.btn:hover, a.btn:hover {
+    color:#fff;
+    background:#000;
+}
+
+
+
+
+.resume {right:0;z-index:10;top:0;position:absolute;}
+.resume .btn {
+    border-radius:0 0 15px 15px;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    font-size:13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px dotted #B6B6B6;
+    border-top:none;
+    margin: 0 2em;
+    background-color: rgba(255, 255, 255, 0.73);
+    color: #026AD2;
+}
+.resume .btn>span {
+    font-weight: 400;
+    font-size:.8em;
+    color:#3598F4;
+    padding-left:.25em;
+}
+.resume .btn:hover { background-color: #026AD2;border-color:#026AD2;}
+.resume .btn:hover > span { color:#ddd; }
+.branding {font-size:16px;margin-bottom:2em;text-align: center;}
+.adieu {color:#888;font-family: 'latomedium_italic', sans-serif;};
+
+
+/* ------- [ MOBILE SMALL STYLES ] ------- */
+@media screen and (max-width: 499px){
+    a.secondary {margin-left: 0 !important;}
+}
+
+/* ------- [ MOBILE LARGE STYLES ] ------- */
+@media screen and (min-width: 499px) and (max-width: 767px){
+    .description {margin-top:1.5em;}
+}
+
+
+/* ------- [ MOBILE (all) STYLES ] ------- */
+@media screen and (max-width: 767px){
+
+    h1 .title {
+        border:none;
+        display:block;
+        padding-left:0;
+        margin-left: 0;
+        padding-bottom:.75em;
+    }
+    h2{
+        text-align: left;
+        margin-top:0;
+        margin-bottom:.75em;
+    } 
+    .resume {
+        top:auto;
+    }
+    section:first-child {
+        padding-bottom: 0;
+    }
+    section {
+        margin-bottom:1.5em;
+        border-bottom:1px dotted #aaa;
+    } 
+    .project .blurb {
+        position: static;
+        text-align: left;
+        width: auto;
+        color:#000;
+        font-size: inherit;
+    }
+    .thumb {text-align: center}
+    .thumb img {display: inline}
+}
+
+/* ------- [ TABLET-SPECIFIC STYLES ] ------- */
+@media screen and (min-width: 768px) and (max-width: 1029px){
+    h1 {
+        border:none;
+        display:block;
+        padding-left:0;
+        margin-left: 0;
+        padding-bottom:2em;
+    }
+    h2{
+        text-align: left;
+        margin-top:0;
+    } 
+    .resume {
+        top:auto;
+    }
+    .resume .btn {
+    }
+    section:first-child {
+        padding-bottom: 0;
+    }
+    section {
+        padding-bottom:1.5em;
+        border-bottom:1px dotted #aaa;
+    }
+    .project .blurb {
+        position: static;
+        text-align: left;
+        width: auto;
+        color:#000;
+        font-size: inherit;
+    }
+    .thumb {text-align: center}
+    .thumb img {display: inline}
+}
+
+/* ------- [ DESKTOP-SPECIFIC STYLES ] ------- */
+@media screen and (min-width: 1030px){
+
+}
+
+/* ------- [ PRINT-SPECIFIC STYLES ] ------- */
+@media print{
+
+}
+
+
+
+po{margin-bottom:2em;line-height:1.75em;}
