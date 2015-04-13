@@ -319,7 +319,7 @@ h6{
 }
 p strong ,
 ul strong,
-ol strong{ font-family: 'lato-black'}
+ol strong{ font-family: 'latoblack'}
 a, a:active, a:visited {color:#026AD2;border-bottom:1px dotted #026AD2; font-family:'latobold'; text-decoration: none;}
 a:hover {border-color:#000;color:#000;}
 a.primary {
