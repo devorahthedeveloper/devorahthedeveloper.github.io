@@ -227,16 +227,16 @@ a:hover {
 	color:#000;
 	border-color:#000;
 }
-a.secondary {
+.secondary {
     display: inline-block;
     margin: 0 0 0 1em;
     font-size: 17px;
     text-align: center;
 }
-.btn {
+.btn, .btn:visited, .btn:active {
     display:inline-block;
     padding:0.2em .6em;
-    font-family: 'latobold', Arial, Helvetica, sans-serif;
+    font-family: 'latosemibold', Arial, Helvetica, sans-serif;
     text-decoration: none;
     text-align: center;
     color:#fff;
@@ -280,7 +280,7 @@ h1 .title {
     border-left: 1px dotted #737373;
 }
 .resume {
-	position:absolute;
+	position:fixed;
 	right:0;
 	z-index:10;
 	top:0;
@@ -290,19 +290,14 @@ h1 .title {
     padding-right:1.2em;
     padding-left: 1.2em;
     font-size:13px;
-    text-transform: uppercase;
-    color: #026AD2;
+    /*text-transform: uppercase;*/
     border-radius:0 0 15px 15px;
-    border: 1px dotted #B6B6B6;
-    border-top:none;
-    background-color:#fff;
-    background-color: rgba(255, 255, 255, 0.73);
+    background-color:#000;
 }
 .resume .btn>span {
     padding-left:.25em;
     font-family: 'latoregular', Arial, Helvetica, sans-serif;
     font-size:.8em;
-    color:#3598F4;
 }
 .resume .btn:hover { 
 	color:#fff;
@@ -428,7 +423,7 @@ h1 .title {
 [ MOBILE SMALL STYLES ]
 -----------------------------------------------*/
 @media screen and (max-width: 499px){
-    a.secondary {
+    .secondary {
     	margin-left: 0;
     }
 }
@@ -461,6 +456,7 @@ h1 .title {
         text-align: left;
     } 
     .resume {
+        position: absolute;
         top:auto;
     }
     section:first-child {
@@ -502,9 +498,8 @@ h1 .title {
         text-align: left;
     } 
     .resume {
+        position:absolute;
         top:auto;
-    }
-    .resume .btn {
     }
     section:first-child {
         padding-bottom: 0;
