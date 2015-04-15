@@ -255,6 +255,7 @@ a:hover {
  -----------------------------------------------*/
 header {
 	padding:0;
+    position: relative;
 }
 h1{
     margin:0;
@@ -280,7 +281,7 @@ h1 .title {
     border-left: 1px dotted #737373;
 }
 .resume {
-	position:fixed;
+	position:absolute;
 	right:0;
 	z-index:10;
 	top:0;
@@ -289,9 +290,8 @@ h1 .title {
     margin: 0 2em;
     padding-right:1.2em;
     padding-left: 1.2em;
-    font-size:13px;
-    /*text-transform: uppercase;*/
-    border-radius:0 0 15px 15px;
+    font-size:15px;
+    border-radius:0 0 12px 12px;
     background-color:#000;
 }
 .resume .btn>span {
